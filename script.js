@@ -1,7 +1,13 @@
-// Mobile menu toggle
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+let position = 0;
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+document.addEventListener("keydown", (e) => {
+  const world = document.querySelector('.world');
+  if (e.key === "ArrowRight") {
+    position += 50; // speed of movement
+    world.style.transform = `translateX(-${position}px)`;
+  }
+  if (e.key === "ArrowLeft") {
+    position = Math.max(0, position - 50);
+    world.style.transform = `translateX(-${position}px)`;
+  }
 });
