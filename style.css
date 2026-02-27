@@ -4,9 +4,9 @@ body {
 }
 
 .world {
-  width: 3000px; /* adjust later if you have a wider background */
+  width: 100vw; /* full viewport width */
   height: 100vh;
-  background: url('park-long.png') no-repeat;
+  background: url('scene0.png') no-repeat center center;
   background-size: cover;
   position: relative;
 }
@@ -14,6 +14,7 @@ body {
 #character {
   position: absolute;
   bottom: 20px;
-  left: 50px;
-  width: 120px;
+  right: 50px;
+  width: 300px;
+  height: auto;
 }
