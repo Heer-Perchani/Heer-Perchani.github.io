@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,9 @@
 
   <!-- Open Graph / link previews (LinkedIn, Slack, etc.) -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Heer's Portfolio Park">
+  <meta property="og:site_name" content="Heer Perchani">
   <meta property="og:title" content="Heer Perchani · Computing Science Student">
-  <meta property="og:description" content="University of Alberta CS student (Minor in Statistics) seeking a 4–16 month ML, data, software or quant internship starting January 2027. Walk through my portfolio park or skip straight to the projects.">
+  <meta property="og:description" content="University of Alberta CS student (Minor in Statistics) seeking a 4–16 month ML, data, software or quant internship starting January 2027.">
   <meta property="og:url" content="https://heer-perchani.github.io/">
   <meta property="og:image" content="https://heer-perchani.github.io/scene0.png">
   <meta property="og:image:width" content="1366">
@@ -21,85 +21,25 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="style.css">
-  <script>document.documentElement.classList.replace('no-js', 'js');</script>
 </head>
 <body>
 
-  <!-- ═══════════════ PORTFOLIO PARK (interactive) ═══════════════ -->
-  <section id="park" class="park" aria-label="Portfolio Park: an interactive walk through my projects">
-    <header class="park-top">
-      <p class="park-name">Heer Perchani</p>
-      <a href="#about" class="btn skip-btn" id="skip-btn">Skip the walk <span aria-hidden="true">↓</span></a>
-      <p class="park-intro">Computing Science student at the University of Alberta, looking for a <strong>January 2027 internship</strong> in ML, data, software or quant.</p>
-    </header>
-
-    <div class="stage" id="stage">
-      <img class="scene is-active" src="scene0.png" alt="" data-scene="0">
-      <img class="scene" data-src="scene1.png" alt="" data-scene="1">
-      <img class="scene" data-src="scene2.png" alt="" data-scene="2">
-      <img class="scene" data-src="scene3.png" alt="" data-scene="3">
-      <img class="scene" data-src="scene4.png" alt="" data-scene="4">
-
-      <!-- Clickable flowers. Positions are in pixels of the 1366×768 scene art. -->
-      <div class="scene-flowers" data-scene="0">
-        <button class="flower" data-project="equity" style="--x:428;--y:458;--w:160;--h:214"><span class="tag" aria-hidden="true">Equity research</span><span class="sr-only">Yellow flower pot: open project Equity Factor Research &amp; Backtesting</span></button>
-        <button class="flower" data-project="furcast" style="--x:848;--y:458;--w:174;--h:214"><span class="tag" aria-hidden="true">FurCast</span><span class="sr-only">Lavender pot: open project FurCast</span></button>
-      </div>
-      <div class="scene-flowers" data-scene="1" hidden>
-        <button class="flower" data-project="emotion" style="--x:404;--y:444;--w:174;--h:218"><span class="tag" aria-hidden="true">Emotion app</span><span class="sr-only">Tulip pot: open project Emotion Recognition Web App</span></button>
-        <button class="flower edge-left" data-project="feelin" style="--x:0;--y:442;--w:166;--h:222"><span class="tag" aria-hidden="true">Feelin'</span><span class="sr-only">Daisy pot: open project Feelin', a mood-tracking Android app</span></button>
-        <button class="flower" data-project="equity" style="--x:868;--y:452;--w:162;--h:216"><span class="tag" aria-hidden="true">Equity research</span><span class="sr-only">Yellow flower pot: open project Equity Factor Research &amp; Backtesting</span></button>
-      </div>
-      <div class="scene-flowers" data-scene="2" hidden>
-        <button class="flower" data-project="feelin" style="--x:384;--y:448;--w:168;--h:222"><span class="tag" aria-hidden="true">Feelin'</span><span class="sr-only">Daisy pot: open project Feelin', a mood-tracking Android app</span></button>
-        <button class="flower" data-project="emotion" style="--x:840;--y:450;--w:174;--h:218"><span class="tag" aria-hidden="true">Emotion app</span><span class="sr-only">Tulip pot: open project Emotion Recognition Web App</span></button>
-      </div>
-      <div class="scene-flowers" data-scene="3" hidden>
-        <button class="flower" data-project="headnav" style="--x:416;--y:452;--w:162;--h:216"><span class="tag" aria-hidden="true">Head navigation</span><span class="sr-only">Clover pot: open project Head Movement Navigation</span></button>
-        <button class="flower" data-project="feelin" style="--x:844;--y:446;--w:166;--h:222"><span class="tag" aria-hidden="true">Feelin'</span><span class="sr-only">Daisy pot: open project Feelin', a mood-tracking Android app</span></button>
-      </div>
-      <div class="scene-flowers" data-scene="4" hidden>
-        <button class="flower flower-bed tag-below" data-project="netflix" style="--x:300;--y:552;--w:240;--h:150"><img src="images/flowers.png" alt=""><span class="tag" aria-hidden="true">Netflix dashboard</span><span class="sr-only">Tulip flower bed: open project Netflix Movies &amp; TV Shows Dashboard</span></button>
-        <button class="flower" data-project="headnav" style="--x:858;--y:460;--w:162;--h:214"><span class="tag" aria-hidden="true">Head navigation</span><span class="sr-only">Clover pot: open project Head Movement Navigation</span></button>
-      </div>
-
-      <div class="character">
-        <p class="speech-bubble" id="bubble" role="status">Hi, I'm Heer! Welcome to my Portfolio Park.</p>
-        <img id="character" src="standing.png" alt="">
-      </div>
-    </div>
-    <img src="waving.png" alt="" hidden><!-- preload the wave pose -->
-
-    <nav class="park-controls" aria-label="Walk through the park">
-      <button class="btn walk-btn" id="back-btn" aria-label="Walk back">← Back</button>
-      <p class="scene-count" id="scene-count" aria-live="polite">Stop 1 of 5</p>
-      <button class="btn walk-btn" id="next-btn" aria-label="Walk forward">Next →</button>
-      <a href="#about" class="btn walk-btn" id="finish-btn" hidden>See everything ↓</a>
-    </nav>
-  </section>
-
-  <!-- ═══════════════ PROJECT CARD (opened by the flowers) ═══════════════ -->
-  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
-    <button class="dialog-close" id="dialog-close" aria-label="Close project card">×</button>
-    <div id="dialog-body"></div>
-  </dialog>
-
-  <!-- ═══════════════ ONE-PAGE OVERVIEW ═══════════════ -->
-  <main id="overview" class="overview">
+  <!-- ═══════════════ PORTFOLIO ═══════════════ -->
+  <main id="top">
     <header class="navbar">
-      <a href="#park" class="logo">Heer Perchani</a>
+      <a href="#top" class="logo">Heer Perchani</a>
       <nav class="nav-links" aria-label="Sections">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-        <a href="resume.pdf" class="btn-sm" target="_blank" rel="noopener">Resume</a>
       </nav>
+      <a href="resume.pdf" class="btn-sm nav-resume" target="_blank" rel="noopener">Resume</a>
     </header>
 
     <!-- ── About ── -->
-    <section id="about" class="section about" tabindex="-1">
+    <section id="about" class="section about">
       <img src="standing.png" alt="Cartoon illustration of Heer in glasses, a blue top and jeans" class="about-char" width="1024" height="1536">
       <div class="about-text">
         <h1>Heer Kumari Perchani</h1>
@@ -180,7 +120,7 @@
       </div>
     </section>
 
-    <!-- ── Projects (the park's flower cards are copied from these) ── -->
+    <!-- ── Projects ── -->
     <section id="projects" class="section">
       <h2>Projects</h2>
       <div class="card-grid">
@@ -262,7 +202,7 @@
         <li><a href="https://github.com/Heer-Perchani" class="btn-sm" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="resume.pdf" class="btn-sm" target="_blank" rel="noopener">Resume (PDF)</a></li>
       </ul>
-      <p class="back-to-park"><a href="#park" class="inline-link">↑ Back to the park</a></p>
+      <p class="back-to-top"><a href="#top" class="inline-link">↑ Back to top</a></p>
     </section>
 
     <footer class="footer">
