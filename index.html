@@ -1,27 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heer's Portfolio Park</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heer Perchani · Computing Science Student &amp; ML/Data Intern Candidate</title>
+  <meta name="description" content="Heer Kumari Perchani: Computing Science student (Minor in Statistics) at the University of Alberta, looking for a 4–16 month machine learning, data, software or quantitative internship starting January 2027.">
+  <link rel="canonical" href="https://heer-perchani.github.io/">
+  <link rel="icon" type="image/png" href="images/flower2.png">
+
+  <!-- Open Graph / link previews (LinkedIn, Slack, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Heer's Portfolio Park">
+  <meta property="og:title" content="Heer Perchani · Computing Science Student">
+  <meta property="og:description" content="University of Alberta CS student (Minor in Statistics) seeking a 4–16 month ML, data, software or quant internship starting January 2027. Walk through my portfolio park or skip straight to the projects.">
+  <meta property="og:url" content="https://heer-perchani.github.io/">
+  <meta property="og:image" content="https://heer-perchani.github.io/scene0.png">
+  <meta property="og:image:width" content="1366">
+  <meta property="og:image:height" content="768">
+  <meta property="og:image:alt" content="A hand-drawn park with a soft blue sky, clouds, grass and flower pots">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
 </head>
 <body>
-  <div class="world">
-    <div class="construction-banner">
-      <h1>🚧 Sorry!</h1>
-      <p>This park is currently under construction. Please visit later.</p>
-      <div class="banner-links">
-        <a href="https://github.com/Heer-Perchani/Heer-Perchani.git" target="_blank">GitHub</a>
-        <a href="Resume - Heer Perchani.pdf" target="_blank">Resume</a>
-        <a href="https://www.linkedin.com/in/heer-perchani/" target="_blank">LinkedIn</a>
+
+  <!-- ═══════════════ PORTFOLIO PARK (interactive) ═══════════════ -->
+  <section id="park" class="park" aria-label="Portfolio Park: an interactive walk through my projects">
+    <header class="park-top">
+      <p class="park-name">Heer Perchani</p>
+      <a href="#about" class="btn skip-btn" id="skip-btn">Skip the walk <span aria-hidden="true">↓</span></a>
+      <p class="park-intro">Computing Science student at the University of Alberta, looking for a <strong>January 2027 internship</strong> in ML, data, software or quant.</p>
+    </header>
+
+    <div class="stage" id="stage">
+      <img class="scene is-active" src="scene0.png" alt="" data-scene="0">
+      <img class="scene" data-src="scene1.png" alt="" data-scene="1">
+      <img class="scene" data-src="scene2.png" alt="" data-scene="2">
+      <img class="scene" data-src="scene3.png" alt="" data-scene="3">
+      <img class="scene" data-src="scene4.png" alt="" data-scene="4">
+
+      <!-- Clickable flowers. Positions are in pixels of the 1366×768 scene art. -->
+      <div class="scene-flowers" data-scene="0">
+        <button class="flower" data-project="equity" style="--x:428;--y:458;--w:160;--h:214"><span class="tag" aria-hidden="true">Equity research</span><span class="sr-only">Yellow flower pot: open project Equity Factor Research &amp; Backtesting</span></button>
+        <button class="flower" data-project="furcast" style="--x:848;--y:458;--w:174;--h:214"><span class="tag" aria-hidden="true">FurCast</span><span class="sr-only">Lavender pot: open project FurCast</span></button>
+      </div>
+      <div class="scene-flowers" data-scene="1" hidden>
+        <button class="flower" data-project="emotion" style="--x:404;--y:444;--w:174;--h:218"><span class="tag" aria-hidden="true">Emotion app</span><span class="sr-only">Tulip pot: open project Emotion Recognition Web App</span></button>
+        <button class="flower edge-left" data-project="feelin" style="--x:0;--y:442;--w:166;--h:222"><span class="tag" aria-hidden="true">Feelin'</span><span class="sr-only">Daisy pot: open project Feelin', a mood-tracking Android app</span></button>
+        <button class="flower" data-project="equity" style="--x:868;--y:452;--w:162;--h:216"><span class="tag" aria-hidden="true">Equity research</span><span class="sr-only">Yellow flower pot: open project Equity Factor Research &amp; Backtesting</span></button>
+      </div>
+      <div class="scene-flowers" data-scene="2" hidden>
+        <button class="flower" data-project="feelin" style="--x:384;--y:448;--w:168;--h:222"><span class="tag" aria-hidden="true">Feelin'</span><span class="sr-only">Daisy pot: open project Feelin', a mood-tracking Android app</span></button>
+        <button class="flower" data-project="emotion" style="--x:840;--y:450;--w:174;--h:218"><span class="tag" aria-hidden="true">Emotion app</span><span class="sr-only">Tulip pot: open project Emotion Recognition Web App</span></button>
+      </div>
+      <div class="scene-flowers" data-scene="3" hidden>
+        <button class="flower" data-project="headnav" style="--x:416;--y:452;--w:162;--h:216"><span class="tag" aria-hidden="true">Head navigation</span><span class="sr-only">Clover pot: open project Head Movement Navigation</span></button>
+        <button class="flower" data-project="feelin" style="--x:844;--y:446;--w:166;--h:222"><span class="tag" aria-hidden="true">Feelin'</span><span class="sr-only">Daisy pot: open project Feelin', a mood-tracking Android app</span></button>
+      </div>
+      <div class="scene-flowers" data-scene="4" hidden>
+        <button class="flower flower-bed tag-below" data-project="netflix" style="--x:300;--y:552;--w:240;--h:150"><img src="images/flowers.png" alt=""><span class="tag" aria-hidden="true">Netflix dashboard</span><span class="sr-only">Tulip flower bed: open project Netflix Movies &amp; TV Shows Dashboard</span></button>
+        <button class="flower" data-project="headnav" style="--x:858;--y:460;--w:162;--h:214"><span class="tag" aria-hidden="true">Head navigation</span><span class="sr-only">Clover pot: open project Head Movement Navigation</span></button>
+      </div>
+
+      <div class="character">
+        <p class="speech-bubble" id="bubble" role="status">Hi, I'm Heer! Welcome to my Portfolio Park.</p>
+        <img id="character" src="standing.png" alt="">
       </div>
     </div>
-    <div id="character-container">
-      <img id="character" src="standing.png" alt="Heer's character">
-      <div class="speech-bubble" id="bubble">Hi, welcome to Heer’s Portfolio Park!</div>
-    </div>
-  </div>
-<script src="script.js"></script>
+    <img src="waving.png" alt="" hidden><!-- preload the wave pose -->
+
+    <nav class="park-controls" aria-label="Walk through the park">
+      <button class="btn walk-btn" id="back-btn" aria-label="Walk back">← Back</button>
+      <p class="scene-count" id="scene-count" aria-live="polite">Stop 1 of 5</p>
+      <button class="btn walk-btn" id="next-btn" aria-label="Walk forward">Next →</button>
+      <a href="#about" class="btn walk-btn" id="finish-btn" hidden>See everything ↓</a>
+    </nav>
+  </section>
+
+  <!-- ═══════════════ PROJECT CARD (opened by the flowers) ═══════════════ -->
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" id="dialog-close" aria-label="Close project card">×</button>
+    <div id="dialog-body"></div>
+  </dialog>
+
+  <!-- ═══════════════ ONE-PAGE OVERVIEW ═══════════════ -->
+  <main id="overview" class="overview">
+    <header class="navbar">
+      <a href="#park" class="logo">Heer Perchani</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" class="btn-sm" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </header>
+
+    <!-- ── About ── -->
+    <section id="about" class="section about" tabindex="-1">
+      <img src="standing.png" alt="Cartoon illustration of Heer in glasses, a blue top and jeans" class="about-char" width="1024" height="1536">
+      <div class="about-text">
+        <h1>Heer Kumari Perchani</h1>
+        <p class="tagline">Computing Science student (Minor in Statistics) at the University of Alberta, Edmonton.</p>
+        <p>Looking for a <strong>4–16 month internship starting January 2027</strong> through the Science Internship Program, in <strong>machine learning, data, software or quantitative</strong> roles.</p>
+        <h2 class="mini-heading">Awards</h2>
+        <ul class="awards">
+          <li>Dean's Honour Roll, First Class Standing</li>
+          <li>HackED 2025 Category Winner (DivE)</li>
+        </ul>
+        <div class="about-buttons">
+          <a href="resume.pdf" class="btn" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a href="mailto:heer.perchani@gmail.com" class="btn btn-outline">Email me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experience ── -->
+    <section id="experience" class="section alt">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3>Undergraduate Researcher</h3>
+          <p class="org">Computing Research Association (UR2PHD Program)</p>
+          <p class="meta">Sep 2026 – Present</p>
+          <ul>
+            <li>Reproducing SPIRAL (ICLR 2026), a self-play reinforcement learning method that improves LLM reasoning.</li>
+            <li>Set up and debugged the training stack (PyTorch, vLLM, DeepSpeed) on an 8-GPU Linux server; porting it to the Narval HPC cluster (Slurm).</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <h3>Machine Learning Fellow</h3>
+          <p class="org">AI4Good Lab &amp; Amii</p>
+          <p class="meta">May – Jun 2026</p>
+          <ul>
+            <li>Co-developed FurCast, which predicts how long shelter animals will stay (86.6% accuracy vs. a 60% baseline).</li>
+            <li>Cleaned and merged 8 datasets (80,000+ records).</li>
+            <li>Trained CNNs for cassava leaf disease classification (87.38% accuracy).</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <h3>Software &amp; Data Analyst Intern</h3>
+          <p class="org">SoftDev (Remote)</p>
+          <p class="meta">Jan – Apr 2026</p>
+          <ul>
+            <li>SQL Server queries and reports for 5 ERP finance modules.</li>
+            <li>Standardized client financial data during onboarding.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <h3>Teaching Assistant, CMPUT 175</h3>
+          <p class="org">University of Alberta</p>
+          <p class="meta">Sep – Dec 2025</p>
+          <ul>
+            <li>Led Python labs for 130+ students.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <h3>Community Caretaker</h3>
+          <p class="org">St. Joseph's College</p>
+          <p class="meta">Sep 2025 – Present</p>
+          <ul>
+            <li>Lead community events and resolve resident concerns.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <h3>Summer Camp Instructor</h3>
+          <p class="meta">Jun – Aug 2025</p>
+          <ul>
+            <li>Taught computer science and game design to Grades 7–11.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <h3>Director of Events &amp; Marketing</h3>
+          <p class="org">Interdepartmental Science Students' Society</p>
+          <p class="meta">Aug 2024 – Oct 2025</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Projects (the park's flower cards are copied from these) ── -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <article class="card" id="project-equity">
+          <h3>Equity Factor Research &amp; Backtesting</h3>
+          <p>Factor research and long-short backtesting on 619K daily S&amp;P 500 prices, with 11 automated look-ahead-bias checks and a pairs-trading strategy.</p>
+          <ul class="tech"><li>SQL (DuckDB)</li><li>Python</li></ul>
+          <a href="https://github.com/Heer-Perchani/sql-equity-factor-research" class="inline-link" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card" id="project-furcast">
+          <h3>FurCast</h3>
+          <p class="meta">AI4Good Lab 2026 · team project</p>
+          <p>Forecasts shelter animals' length of stay and outcome; 86.6% accuracy vs. a 60% baseline.</p>
+          <ul class="tech"><li>Python</li><li>scikit-learn</li><li>Flask</li><li>Gemini API</li></ul>
+          <a href="https://github.com/paw-some-pals/furcast" class="inline-link" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card" id="project-emotion">
+          <h3>Emotion Recognition Web App</h3>
+          <p>CNN trained from scratch to classify 5 facial emotions (71% accuracy), served through a Flask API.</p>
+          <ul class="tech"><li>PyTorch</li><li>Flask</li><li>JavaScript</li></ul>
+          <a href="https://github.com/Heer-Perchani/Human-Emotion-Detection" class="inline-link" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card" id="project-feelin">
+          <h3>Feelin'</h3>
+          <p class="meta">6-person Scrum team</p>
+          <p>Social mood-tracking Android app. I built the mood history feed, add/edit flows, profile page and map view.</p>
+          <ul class="tech"><li>Java</li><li>Firebase</li><li>Google Maps API</li></ul>
+          <a href="https://github.com/cmput301-w25/project-donotredeem" class="inline-link" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card" id="project-headnav">
+          <h3>Head Movement Navigation</h3>
+          <p class="meta">HackED 2025 DivE category winner · team project</p>
+          <p>Chrome extension for hands-free browsing using head movements.</p>
+          <ul class="tech"><li>JavaScript</li><li>FaceAPI.js</li></ul>
+          <a href="https://github.com/kathan-205/Git-Committers" class="inline-link" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card" id="project-netflix">
+          <h3>Netflix Movies &amp; TV Shows Dashboard</h3>
+          <p>Power BI dashboard on 8,278 titles with Power Query cleaning and DAX.</p>
+          <ul class="tech"><li>Power BI</li><li>Power Query</li><li>DAX</li></ul>
+          <a href="https://github.com/Heer-Perchani/netflix-powerbi-dashboard" class="inline-link" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Skills ── -->
+    <section id="skills" class="section alt">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <p>Python, C++, Java, SQL, R, MATLAB, JavaScript</p>
+        </div>
+        <div class="skill-group">
+          <h3>ML &amp; AI</h3>
+          <p>PyTorch, TensorFlow, scikit-learn, Hugging Face, vLLM</p>
+        </div>
+        <div class="skill-group">
+          <h3>Infrastructure</h3>
+          <p>Docker, Linux, Slurm, Git</p>
+        </div>
+        <div class="skill-group">
+          <h3>Data &amp; BI</h3>
+          <p>Power BI, Tableau, Excel, BigQuery</p>
+        </div>
+        <div class="skill-group">
+          <h3>Apps &amp; Web</h3>
+          <p>Firebase, Flask, Android</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact" class="section contact">
+      <h2>Let's Connect</h2>
+      <ul class="links-grid">
+        <li><a href="mailto:heer.perchani@gmail.com" class="btn-sm">heer.perchani@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/heer-perchani" class="btn-sm" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Heer-Perchani" class="btn-sm" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="resume.pdf" class="btn-sm" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      </ul>
+      <p class="back-to-park"><a href="#park" class="inline-link">↑ Back to the park</a></p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Heer Perchani. Made with ♥ and a lot of flower pots.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
